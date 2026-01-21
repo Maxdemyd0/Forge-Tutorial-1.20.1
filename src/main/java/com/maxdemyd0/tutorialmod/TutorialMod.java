@@ -1,5 +1,7 @@
 package com.maxdemyd0.tutorialmod;
 
+import com.maxdemyd0.tutorialmod.block.ModBlocks;
+import com.maxdemyd0.tutorialmod.item.ModCreativeModeTabs;
 import com.maxdemyd0.tutorialmod.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
@@ -42,6 +44,8 @@ public class TutorialMod
         IEventBus modEventBus = context.getModEventBus();
 
         ModItems.register(modEventBus);
+        ModCreativeModeTabs.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -59,10 +63,6 @@ public class TutorialMod
 
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.SAPPHIRE);
-            event.accept(ModItems.RAW_SAPPHIRE);
-        }
     }
 
     @SubscribeEvent
