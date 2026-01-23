@@ -13,9 +13,9 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MOD_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, TutorialMod.MOD_ID);
 
-    public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MOD_TABS.register("tutorial_tab",
+    public static final RegistryObject<CreativeModeTab> SAPPHIRE_TAB = CREATIVE_MOD_TABS.register("tutorial_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.SAPPHIRE.get()))
-                    .title(Component.translatable("creativetab.tutorial_tab")).displayItems((pParameters, pOutput) -> {
+                    .title(Component.translatable("creativetab.sapphire_tab")).displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.SAPPHIRE.get());
                         pOutput.accept(ModItems.RAW_SAPPHIRE.get());
                         pOutput.accept(ModBlocks.SAPPHIRE_BLOCK.get());
@@ -24,6 +24,13 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get());
                         pOutput.accept(ModBlocks.NETHER_SAPPHIRE_ORE.get());
                         pOutput.accept(ModBlocks.END_SAPPHIRE_ORE.get());
+                    })
+                    .build());
+
+    public static final RegistryObject<CreativeModeTab> OTHER_TAB = CREATIVE_MOD_TABS.register("misc_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.METAL_DETECTOR.get()))
+                    .title(Component.translatable("creativetab.misc_tab")).displayItems((pParameters, pOutput) -> {
+                        pOutput.accept(ModItems.METAL_DETECTOR.get());
                     })
                     .build());
 
