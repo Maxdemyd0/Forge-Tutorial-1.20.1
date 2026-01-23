@@ -10,6 +10,7 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
+import org.jetbrains.annotations.NotNull;
 
 public class MetalDetectorItem extends Item {
 
@@ -18,7 +19,7 @@ public class MetalDetectorItem extends Item {
     }
 
     @Override
-    public InteractionResult useOn(UseOnContext pContext) {
+    public @NotNull InteractionResult useOn(UseOnContext pContext) {
         if(!pContext.getLevel().isClientSide()) {
             BlockPos positionClicked = pContext.getClickedPos();
             Player player = pContext.getPlayer();
