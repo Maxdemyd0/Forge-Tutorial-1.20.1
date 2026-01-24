@@ -17,6 +17,7 @@ public class ModCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.SAPPHIRE.get()))
                     .title(Component.translatable("creativetab.sapphire_tab")).displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.SAPPHIRE.get());
+                        pOutput.accept(ModItems.SAPPHIRE_NUGGET.get());
                         pOutput.accept(ModItems.RAW_SAPPHIRE.get());
                         pOutput.accept(ModBlocks.SAPPHIRE_BLOCK.get());
                         pOutput.accept(ModBlocks.RAW_SAPPHIRE_BLOCK.get());
@@ -24,6 +25,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get());
                         pOutput.accept(ModBlocks.NETHER_SAPPHIRE_ORE.get());
                         pOutput.accept(ModBlocks.END_SAPPHIRE_ORE.get());
+                        pOutput.accept(ModItems.STRAWBERRY.get());
+                        pOutput.accept(ModItems.SAPPHIRE_STRAWBERRY.get());
                     })
                     .build());
 
@@ -34,6 +37,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.GEM_DETECTOR.get());
                         pOutput.accept(ModItems.REDSTONE_MAGNET.get());
                         pOutput.accept(ModItems.GOLD_REDSTONE_MAGNET.get());
+                        pOutput.accept(ModBlocks.SOUND_BLOCK.get());
                     })
                     .build());
 

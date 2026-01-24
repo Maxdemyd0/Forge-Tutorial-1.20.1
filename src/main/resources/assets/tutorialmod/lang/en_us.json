@@ -1,8 +1,12 @@
 {
   "item.tutorialmod.sapphire": "Sapphire",
   "item.tutorialmod.raw_sapphire": "Raw Sapphire",
+  "item.tutorialmod.sapphire_nugget": "Sapphire Nugget",
   "item.tutorialmod.redstone_magnet": "Redstone Magnet",
   "item.tutorialmod.gold_redstone_magnet": "Gold Redstone Magnet",
+
+  "item.tutorialmod.strawberry": "Strawberry",
+  "item.tutorialmod.sapphire_strawberry": "Sapphire Strawberry",
 
   "item.tutorialmod.metal_detector": "Metal Detector",
   "item.tutorialmod.gem_detector": "Gem Detector",
@@ -13,6 +17,8 @@
   "block.tutorialmod.deepslate_sapphire_ore": "Deepslate Sapphire Ore",
   "block.tutorialmod.nether_sapphire_ore": "Nether Sapphire Ore",
   "block.tutorialmod.end_sapphire_ore": "End Sapphire Ore",
+
+  "block.tutorialmod.sound_block": "Sound Block",
 
   "creativetab.sapphire_tab": "Tutorial Mod: Sapphires",
   "creativetab.misc_tab": "Tutorial Mod: Misc"
