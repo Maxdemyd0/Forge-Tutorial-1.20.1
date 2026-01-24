@@ -1,8 +1,11 @@
 {
   "item.tutorialmod.sapphire": "Sapphire",
   "item.tutorialmod.raw_sapphire": "Raw Sapphire",
+  "item.tutorialmod.redstone_magnet": "Redstone Magnet",
+  "item.tutorialmod.gold_redstone_magnet": "Gold Redstone Magnet",
 
   "item.tutorialmod.metal_detector": "Metal Detector",
+  "item.tutorialmod.gem_detector": "Gem Detector",
 
   "block.tutorialmod.sapphire_block": "Block of Sapphire",
   "block.tutorialmod.raw_sapphire_block": "Block of Raw Sapphire",

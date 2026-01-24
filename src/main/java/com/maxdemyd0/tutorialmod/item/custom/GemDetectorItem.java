@@ -1,5 +1,6 @@
 package com.maxdemyd0.tutorialmod.item.custom;
 
+import com.maxdemyd0.tutorialmod.block.ModBlocks;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -12,9 +13,9 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.NotNull;
 
-public class MetalDetectorItem extends Item {
+public class GemDetectorItem extends Item {
 
-    public MetalDetectorItem(Properties pProperties) {
+    public GemDetectorItem(Properties pProperties) {
         super(pProperties);
     }
 
@@ -28,15 +29,15 @@ public class MetalDetectorItem extends Item {
             for(int i = 0; i <= positionClicked.getY() + 64; i++) {
                 BlockState state = pContext.getLevel().getBlockState(positionClicked.below(i));
 
-                if(isMetalOre(state)){
-                    outputMetalCoordinates(positionClicked.below(i), player, state.getBlock());
+                if(isGemOre(state)){
+                    outputGemCoordinates(positionClicked.below(i), player, state.getBlock());
                     foundBlock = true;
 
                     break;
                 }
             }
             if(!foundBlock) {
-                player.sendSystemMessage(Component.literal("No metal ores found"));
+                player.sendSystemMessage(Component.literal("No gems found"));
             }
         }
 
@@ -46,13 +47,15 @@ public class MetalDetectorItem extends Item {
         return InteractionResult.SUCCESS;
     }
 
-    private void outputMetalCoordinates(BlockPos blockPos, Player player, Block block) {
+    private void outputGemCoordinates(BlockPos blockPos, Player player, Block block) {
         player.sendSystemMessage(Component.literal(
                 "Found " + I18n.get(block.getDescriptionId() + " at (" + blockPos.getX() + ", " + blockPos.getY() + ", " + blockPos.getZ() + ")")));
     }
 
-    private boolean isMetalOre(BlockState state) {
-        return state.is(Blocks.IRON_ORE) || state.is(Blocks.GOLD_ORE) || state.is(Blocks.COPPER_ORE) ||
-                state.is(Blocks.DEEPSLATE_IRON_ORE) || state.is(Blocks.DEEPSLATE_GOLD_ORE) || state.is(Blocks.DEEPSLATE_COPPER_ORE) || state.is(Blocks.NETHER_GOLD_ORE);
+    private boolean isGemOre(BlockState state) {
+        return state.is(Blocks.DIAMOND_ORE) || state.is(Blocks.DEEPSLATE_DIAMOND_ORE) || state.is(Blocks.EMERALD_ORE) || state.is(Blocks.DEEPSLATE_EMERALD_ORE) ||
+                state.is(ModBlocks.SAPPHIRE_ORE.get()) || state.is(ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get()) || state.is(ModBlocks.NETHER_SAPPHIRE_ORE.get())
+                || state.is(ModBlocks.END_SAPPHIRE_ORE.get()) || state.is(Blocks.REDSTONE_ORE) || state.is(Blocks.DEEPSLATE_REDSTONE_ORE)
+                || state.is(Blocks.LAPIS_ORE) || state.is(Blocks.DEEPSLATE_LAPIS_ORE) || state.is(Blocks.NETHER_QUARTZ_ORE);
     }
 }

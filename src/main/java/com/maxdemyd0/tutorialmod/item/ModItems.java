@@ -1,6 +1,7 @@
 package com.maxdemyd0.tutorialmod.item;
 
 import com.maxdemyd0.tutorialmod.TutorialMod;
+import com.maxdemyd0.tutorialmod.item.custom.GemDetectorItem;
 import com.maxdemyd0.tutorialmod.item.custom.MetalDetectorItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -15,7 +16,13 @@ public class ModItems {
 
     public static final RegistryObject<Item> RAW_SAPPHIRE = ITEMS.register("raw_sapphire", () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> REDSTONE_MAGNET = ITEMS.register("redstone_magnet", () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> GOLD_REDSTONE_MAGNET = ITEMS.register("gold_redstone_magnet", () -> new Item(new Item.Properties()));
+
     public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector", () -> new MetalDetectorItem(new Item.Properties().durability(100)));
+
+    public static final RegistryObject<Item> GEM_DETECTOR = ITEMS.register("gem_detector", () -> new GemDetectorItem(new Item.Properties().durability(100)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

@@ -27,10 +27,13 @@ public class ModCreativeModeTabs {
                     })
                     .build());
 
-    public static final RegistryObject<CreativeModeTab> OTHER_TAB = CREATIVE_MOD_TABS.register("misc_tab",
+    public static final RegistryObject<CreativeModeTab> MISC_TAB = CREATIVE_MOD_TABS.register("misc_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.METAL_DETECTOR.get()))
                     .title(Component.translatable("creativetab.misc_tab")).displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.METAL_DETECTOR.get());
+                        pOutput.accept(ModItems.GEM_DETECTOR.get());
+                        pOutput.accept(ModItems.REDSTONE_MAGNET.get());
+                        pOutput.accept(ModItems.GOLD_REDSTONE_MAGNET.get());
                     })
                     .build());
 

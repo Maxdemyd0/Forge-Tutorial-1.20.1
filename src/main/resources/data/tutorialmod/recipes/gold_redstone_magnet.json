@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "@#@",
+    "#@#",
+    "@#@"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:gold_ingot"
+    },
+    "@": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "item": "tutorialmod:gold_redstone_magnet"
+  }
+}
