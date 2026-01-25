@@ -8,6 +8,8 @@
   "item.tutorialmod.strawberry": "Strawberry",
   "item.tutorialmod.sapphire_strawberry": "Sapphire Strawberry",
 
+  "item.tutorialmod.pine_cone": "Pine Cone",
+
   "item.tutorialmod.metal_detector": "Metal Detector",
   "item.tutorialmod.gem_detector": "Gem Detector",
 
@@ -21,5 +23,9 @@
   "block.tutorialmod.sound_block": "Sound Block",
 
   "creativetab.sapphire_tab": "Tutorial Mod: Sapphires",
-  "creativetab.misc_tab": "Tutorial Mod: Misc"
+  "creativetab.misc_tab": "Tutorial Mod: Misc",
+
+  "tooltip.tutorialmod.metal_detector.tooltip": "A tool that can detect underground metals!",
+  "tooltip.tutorialmod.gem_detector.tooltip": "A tool that can detect underground gems!",
+  "tooltip.tutorialmod.sound_block.tooltip": "A block that makes a sound when right-clicked!"
 }

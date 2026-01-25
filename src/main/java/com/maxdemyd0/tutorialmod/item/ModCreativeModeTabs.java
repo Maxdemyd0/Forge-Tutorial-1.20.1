@@ -38,6 +38,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.REDSTONE_MAGNET.get());
                         pOutput.accept(ModItems.GOLD_REDSTONE_MAGNET.get());
                         pOutput.accept(ModBlocks.SOUND_BLOCK.get());
+                        pOutput.accept(ModItems.PINE_CONE.get());
                     })
                     .build());
 
