@@ -1,0 +1,29 @@
+package com.maxdemyd0.tutorialmod.util;
+
+import com.maxdemyd0.tutorialmod.TutorialMod;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
+
+public class ModTags {
+    public static class Blocks {
+        public static final TagKey<Block> METAL_DETECTOR_METALS = tag("metal_detector_metals");
+
+        public static final TagKey<Block> GEM_DETECTOR_GEMS = tag("gem_detector_gems");
+
+        private static TagKey<Block> tag(String path) {
+            return BlockTags.create(ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, path));
+        }
+    }
+
+    public static class Items {
+
+
+        private static TagKey<Item> tag(String path) {
+            return ItemTags.create(ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, path));
+        }
+    }
+}

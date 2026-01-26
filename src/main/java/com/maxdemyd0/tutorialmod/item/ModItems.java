@@ -28,6 +28,12 @@ public class ModItems {
     public static final RegistryObject<Item> SAPPHIRE_STRAWBERRY = ITEMS.register("sapphire_strawberry",
             () -> new Item(new Item.Properties().food(ModFoods.SAPPHIRE_STRAWBERRY)));
 
+    public static final RegistryObject<Item> RAW_FRENCH_FRIES = ITEMS.register("raw_french_fries",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> FRENCH_FRIES = ITEMS.register("french_fries",
+            () -> new Item(new Item.Properties().food(ModFoods.FRENCH_FRIES)));
+
     public static final RegistryObject<Item> PINE_CONE = ITEMS.register("pine_cone",
             () -> new FuelItem(new Item.Properties(), 400));
 

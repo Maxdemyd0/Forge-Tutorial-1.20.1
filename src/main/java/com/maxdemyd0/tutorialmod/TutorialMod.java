@@ -6,6 +6,8 @@ import com.maxdemyd0.tutorialmod.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -60,12 +62,15 @@ public class TutorialMod
 
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
+
     }
 
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event)
     {
-
+        for(ServerPlayer player : event.getServer().getPlayerList().getPlayers()) {
+            player.sendSystemMessage(Component.translatable("message.tutorialmod.server_start_message"));
+        }
     }
 
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)

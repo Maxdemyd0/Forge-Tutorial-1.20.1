@@ -9,5 +9,8 @@ public class ModFoods {
             .saturationMod(0.2f).build();
 
     public static final FoodProperties SAPPHIRE_STRAWBERRY = new FoodProperties.Builder().fast().nutrition(4)
-            .saturationMod(0.2f).effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 160), 1.0f).alwaysEat().build();
+            .saturationMod(0.2f).effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 160), 1.0f).effect(() -> new MobEffectInstance(MobEffects.JUMP, 160), 1.0f).alwaysEat().build();
+
+    public static final FoodProperties FRENCH_FRIES = new FoodProperties.Builder().fast().nutrition(5)
+            .saturationMod(0.3f).build();
 }

@@ -1,6 +1,7 @@
 package com.maxdemyd0.tutorialmod.item.custom;
 
 import com.maxdemyd0.tutorialmod.block.ModBlocks;
+import com.maxdemyd0.tutorialmod.util.ModTags;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -65,9 +66,6 @@ public class GemDetectorItem extends Item {
     }
 
     private boolean isGemOre(BlockState state) {
-        return state.is(Blocks.DIAMOND_ORE) || state.is(Blocks.DEEPSLATE_DIAMOND_ORE) || state.is(Blocks.EMERALD_ORE) || state.is(Blocks.DEEPSLATE_EMERALD_ORE) ||
-                state.is(ModBlocks.SAPPHIRE_ORE.get()) || state.is(ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get()) || state.is(ModBlocks.NETHER_SAPPHIRE_ORE.get())
-                || state.is(ModBlocks.END_SAPPHIRE_ORE.get()) || state.is(Blocks.REDSTONE_ORE) || state.is(Blocks.DEEPSLATE_REDSTONE_ORE)
-                || state.is(Blocks.LAPIS_ORE) || state.is(Blocks.DEEPSLATE_LAPIS_ORE) || state.is(Blocks.NETHER_QUARTZ_ORE);
+        return state.is(ModTags.Blocks.GEM_DETECTOR_GEMS);
     }
 }

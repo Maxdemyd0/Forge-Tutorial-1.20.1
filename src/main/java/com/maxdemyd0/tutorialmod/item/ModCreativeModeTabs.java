@@ -25,8 +25,6 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get());
                         pOutput.accept(ModBlocks.NETHER_SAPPHIRE_ORE.get());
                         pOutput.accept(ModBlocks.END_SAPPHIRE_ORE.get());
-                        pOutput.accept(ModItems.STRAWBERRY.get());
-                        pOutput.accept(ModItems.SAPPHIRE_STRAWBERRY.get());
                     })
                     .build());
 
@@ -39,6 +37,16 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.GOLD_REDSTONE_MAGNET.get());
                         pOutput.accept(ModBlocks.SOUND_BLOCK.get());
                         pOutput.accept(ModItems.PINE_CONE.get());
+                    })
+                    .build());
+
+    public static final RegistryObject<CreativeModeTab> FOOD_TAB = CREATIVE_MOD_TABS.register("food_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.STRAWBERRY.get()))
+                    .title(Component.translatable("creativetab.food_tab")).displayItems((pParameters, pOutput) -> {
+                        pOutput.accept(ModItems.STRAWBERRY.get());
+                        pOutput.accept(ModItems.SAPPHIRE_STRAWBERRY.get());
+                        pOutput.accept(ModItems.RAW_FRENCH_FRIES.get());
+                        pOutput.accept(ModItems.FRENCH_FRIES.get());
                     })
                     .build());
 

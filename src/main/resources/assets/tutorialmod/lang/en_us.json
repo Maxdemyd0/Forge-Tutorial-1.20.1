@@ -7,6 +7,8 @@
 
   "item.tutorialmod.strawberry": "Strawberry",
   "item.tutorialmod.sapphire_strawberry": "Sapphire Strawberry",
+  "item.tutorialmod.raw_french_fries": "Raw French Fries",
+  "item.tutorialmod.french_fries": "French Fries",
 
   "item.tutorialmod.pine_cone": "Pine Cone",
 
@@ -24,8 +26,11 @@
 
   "creativetab.sapphire_tab": "Tutorial Mod: Sapphires",
   "creativetab.misc_tab": "Tutorial Mod: Misc",
+  "creativetab.food_tab": "Tutorial Mod: Foods",
 
   "tooltip.tutorialmod.metal_detector.tooltip": "A tool that can detect underground metals!",
   "tooltip.tutorialmod.gem_detector.tooltip": "A tool that can detect underground gems!",
-  "tooltip.tutorialmod.sound_block.tooltip": "A block that makes a sound when right-clicked!"
+  "tooltip.tutorialmod.sound_block.tooltip": "A block that makes a sound when right-clicked!",
+
+  "message.tutorialmod.server_start_message": "Welcome to Tutorial Mod v1.0! "
 }

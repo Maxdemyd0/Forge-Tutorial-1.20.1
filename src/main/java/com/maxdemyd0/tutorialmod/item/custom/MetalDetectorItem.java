@@ -1,5 +1,6 @@
 package com.maxdemyd0.tutorialmod.item.custom;
 
+import com.maxdemyd0.tutorialmod.util.ModTags;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -64,7 +65,6 @@ public class MetalDetectorItem extends Item {
     }
 
     private boolean isMetalOre(BlockState state) {
-        return state.is(Blocks.IRON_ORE) || state.is(Blocks.GOLD_ORE) || state.is(Blocks.COPPER_ORE) ||
-                state.is(Blocks.DEEPSLATE_IRON_ORE) || state.is(Blocks.DEEPSLATE_GOLD_ORE) || state.is(Blocks.DEEPSLATE_COPPER_ORE) || state.is(Blocks.NETHER_GOLD_ORE);
+        return state.is(ModTags.Blocks.METAL_DETECTOR_METALS);
     }
 }
