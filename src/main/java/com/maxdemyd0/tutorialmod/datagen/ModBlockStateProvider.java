@@ -9,7 +9,6 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModBlockStateProvider extends BlockStateProvider {
-
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, TutorialMod.MOD_ID, exFileHelper);
     }
@@ -18,10 +17,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.SAPPHIRE_BLOCK);
         blockWithItem(ModBlocks.RAW_SAPPHIRE_BLOCK);
+
         blockWithItem(ModBlocks.SAPPHIRE_ORE);
         blockWithItem(ModBlocks.DEEPSLATE_SAPPHIRE_ORE);
-        blockWithItem(ModBlocks.NETHER_SAPPHIRE_ORE);
         blockWithItem(ModBlocks.END_SAPPHIRE_ORE);
+        blockWithItem(ModBlocks.NETHER_SAPPHIRE_ORE);
+
         blockWithItem(ModBlocks.SOUND_BLOCK);
     }
 

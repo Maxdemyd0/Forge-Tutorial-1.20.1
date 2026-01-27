@@ -17,7 +17,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     }
 
     @Override
-    protected void registerModels() {
+    public void registerModels() {
         simpleItem(ModItems.SAPPHIRE);
         simpleItem(ModItems.SAPPHIRE_NUGGET);
         simpleItem(ModItems.RAW_SAPPHIRE);
@@ -33,6 +33,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> itemRegistryObject) {
+        assert itemRegistryObject.getId() != null;
         return withExistingParent(itemRegistryObject.getId().getPath(),
                 ResourceLocation.parse("item/generated"))
                 .texture("layer0", ResourceLocation.fromNamespaceAndPath(itemRegistryObject.getId().getNamespace(), "item/" + itemRegistryObject.getId().getPath()));
