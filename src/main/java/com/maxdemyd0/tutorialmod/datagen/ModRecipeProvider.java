@@ -41,6 +41,44 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.SAPPHIRE_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.SAPPHIRE_BLOCK.get()), has(ModBlocks.SAPPHIRE_BLOCK.get()))
                 .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.METAL_DETECTOR.get(), 1)
+                .pattern("  S")
+                .pattern(" S ")
+                .pattern("IMI")
+                .define('S', Items.STICK)
+                .define('M', ModItems.REDSTONE_MAGNET.get())
+                .define('I', Items.IRON_INGOT)
+                .unlockedBy(getHasName(ModItems.REDSTONE_MAGNET.get()), has(ModItems.REDSTONE_MAGNET.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GEM_DETECTOR.get(), 1)
+                .pattern("  S")
+                .pattern(" S ")
+                .pattern("IMI")
+                .define('S', Items.STICK)
+                .define('M', ModItems.GOLD_REDSTONE_MAGNET.get())
+                .define('I', Items.GOLD_INGOT)
+                .unlockedBy(getHasName(ModItems.GOLD_REDSTONE_MAGNET.get()), has(ModItems.GOLD_REDSTONE_MAGNET.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.REDSTONE_MAGNET.get(), 1)
+                .pattern("RIR")
+                .pattern("IRI")
+                .pattern("RIR")
+                .define('R', Items.REDSTONE)
+                .define('I', Items.IRON_INGOT)
+                .unlockedBy(getHasName(Items.REDSTONE), has(Items.REDSTONE))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GOLD_REDSTONE_MAGNET.get(), 1)
+                .pattern("RIR")
+                .pattern("IRI")
+                .pattern("RIR")
+                .define('R', Items.REDSTONE)
+                .define('I', Items.GOLD_INGOT)
+                .unlockedBy(getHasName(Items.REDSTONE), has(Items.REDSTONE))
+                .save(pWriter);
     }
 
     public static void oreSmelting(Consumer<FinishedRecipe> p_250654_, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup) {

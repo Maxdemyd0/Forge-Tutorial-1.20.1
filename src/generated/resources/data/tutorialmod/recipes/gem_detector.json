@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "minecraft:gold_ingot"
+    },
+    "M": {
+      "item": "tutorialmod:gold_redstone_magnet"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "  S",
+    " S ",
+    "IMI"
+  ],
+  "result": {
+    "item": "tutorialmod:gem_detector"
+  },
+  "show_notification": true
+}
