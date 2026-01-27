@@ -61,7 +61,7 @@ public class MetalDetectorItem extends Item {
 
     private void outputMetalCoordinates(BlockPos blockPos, Player player, Block block) {
         player.sendSystemMessage(Component.literal(
-                "Found " + I18n.get(block.getDescriptionId() + " at (" + blockPos.getX() + ", " + blockPos.getY() + ", " + blockPos.getZ() + ")")));
+                "Found " + I18n.get(block.getDescriptionId()) + " at (" + blockPos.getX() + ", " + blockPos.getY() + ", " + blockPos.getZ() + ")"));
     }
 
     private boolean isMetalOre(BlockState state) {
