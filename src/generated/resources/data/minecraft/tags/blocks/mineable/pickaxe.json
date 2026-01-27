@@ -6,6 +6,15 @@
     "tutorialmod:end_sapphire_ore",
     "tutorialmod:sapphire_block",
     "tutorialmod:raw_sapphire_block",
+    "tutorialmod:sapphire_stairs",
+    "tutorialmod:sapphire_slab",
+    "tutorialmod:sapphire_button",
+    "tutorialmod:sapphire_pressure_plate",
+    "tutorialmod:sapphire_fence",
+    "tutorialmod:sapphire_fence_gate",
+    "tutorialmod:sapphire_wall",
+    "tutorialmod:sapphire_door",
+    "tutorialmod:sapphire_trapdoor",
     "tutorialmod:sound_block"
   ]
 }
