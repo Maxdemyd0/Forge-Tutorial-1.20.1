@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "tutorialmod:sapphire"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "GG ",
+    "GS ",
+    " S "
+  ],
+  "result": {
+    "item": "tutorialmod:sapphire_axe"
+  },
+  "show_notification": true
+}

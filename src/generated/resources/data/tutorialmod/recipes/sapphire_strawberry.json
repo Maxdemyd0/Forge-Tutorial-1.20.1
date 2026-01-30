@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "N": {
+      "item": "tutorialmod:sapphire_nugget"
+    },
+    "S": {
+      "item": "tutorialmod:strawberry"
+    }
+  },
+  "pattern": [
+    "   ",
+    "NSN",
+    " N "
+  ],
+  "result": {
+    "item": "tutorialmod:sapphire_strawberry"
+  },
+  "show_notification": true
+}
