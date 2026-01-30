@@ -1,4 +1,4 @@
-// 1.20.1	2026-01-26T22:22:01.8025083	Tags for minecraft:block mod id tutorialmod
+// 1.20.1	2026-01-28T20:00:48.3994962	Tags for minecraft:block mod id tutorialmod
 eb9c3bd4f434cd2ee198618689887868a03fc824 data/minecraft/tags/blocks/fences.json
 0f23036eb868569b86c1fbde92de4c816b9df411 data/minecraft/tags/blocks/fence_gates.json
 617b4425ec208a276e5f614e473edf4bf7951d1a data/minecraft/tags/blocks/mineable/pickaxe.json
@@ -6,3 +6,4 @@ eb9c3bd4f434cd2ee198618689887868a03fc824 data/minecraft/tags/blocks/fences.json
 39afac99ef2666de5a9686ccfc15e6f7611922c8 data/minecraft/tags/blocks/walls.json
 cabe6ff83d92c0f60ae7736dd0f0dd61a6d8ad1d data/tutorialmod/tags/blocks/gem_detector_gems.json
 1bcf7467f91689344f2fa335cb10575cbff991ad data/tutorialmod/tags/blocks/metal_detector_metals.json
+bfdfab925d3aae515709e426b963be6ae6fc0d4b data/tutorialmod/tags/blocks/needs_sapphire_tool.json

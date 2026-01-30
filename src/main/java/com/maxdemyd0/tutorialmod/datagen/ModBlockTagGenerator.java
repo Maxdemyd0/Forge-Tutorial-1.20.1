@@ -66,6 +66,11 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.SAPPHIRE_TRAPDOOR.get()
                 );
 
+        this.tag(ModTags.Blocks.NEEDS_SAPPHIRE_TOOL)
+                .add(
+                        Blocks.REINFORCED_DEEPSLATE
+                );
+
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(
                         ModBlocks.SAPPHIRE_ORE.get(),

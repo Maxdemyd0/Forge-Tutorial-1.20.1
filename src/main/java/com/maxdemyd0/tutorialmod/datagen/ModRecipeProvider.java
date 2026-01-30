@@ -79,6 +79,62 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('I', Items.GOLD_INGOT)
                 .unlockedBy(getHasName(Items.REDSTONE), has(Items.REDSTONE))
                 .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SAPPHIRE_STRAWBERRY.get(), 1)
+                .pattern("   ")
+                .pattern("NSN")
+                .pattern(" N ")
+                .define('S', ModItems.STRAWBERRY.get())
+                .define('N', ModItems.SAPPHIRE_NUGGET.get())
+                .unlockedBy(getHasName(ModItems.STRAWBERRY.get()), has(ModItems.STRAWBERRY.get()))
+                .save(pWriter);
+
+        //-------tools-------\\
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SAPPHIRE_SWORD.get(), 1)
+                .pattern(" G ")
+                .pattern(" G ")
+                .pattern(" S ")
+                .define('G', ModItems.SAPPHIRE.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.SAPPHIRE.get()), has(ModItems.SAPPHIRE.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SAPPHIRE_PICKAXE.get(), 1)
+                .pattern("GGG")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('G', ModItems.SAPPHIRE.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.SAPPHIRE.get()), has(ModItems.SAPPHIRE.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SAPPHIRE_AXE.get(), 1)
+                .pattern("GG ")
+                .pattern("GS ")
+                .pattern(" S ")
+                .define('G', ModItems.SAPPHIRE.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.SAPPHIRE.get()), has(ModItems.SAPPHIRE.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SAPPHIRE_SHOVEL.get(), 1)
+                .pattern(" G ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('G', ModItems.SAPPHIRE.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.SAPPHIRE.get()), has(ModItems.SAPPHIRE.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SAPPHIRE_HOE.get(), 1)
+                .pattern("GG ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('G', ModItems.SAPPHIRE.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.SAPPHIRE.get()), has(ModItems.SAPPHIRE.get()))
+                .save(pWriter);
     }
 
     public static void oreSmelting(Consumer<FinishedRecipe> p_250654_, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup) {

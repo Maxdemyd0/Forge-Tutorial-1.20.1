@@ -14,6 +14,8 @@ public class ModTags {
 
         public static final TagKey<Block> GEM_DETECTOR_GEMS = tag("gem_detector_gems");
 
+        public static final TagKey<Block> NEEDS_SAPPHIRE_TOOL = tag("needs_sapphire_tool");
+
         private static TagKey<Block> tag(String path) {
             return BlockTags.create(ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, path));
         }
