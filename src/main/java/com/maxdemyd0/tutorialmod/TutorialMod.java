@@ -3,6 +3,7 @@ package com.maxdemyd0.tutorialmod;
 import com.maxdemyd0.tutorialmod.block.ModBlocks;
 import com.maxdemyd0.tutorialmod.item.ModCreativeModeTabs;
 import com.maxdemyd0.tutorialmod.item.ModItems;
+import com.maxdemyd0.tutorialmod.loot.ModLootModifiers;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
@@ -45,6 +46,7 @@ public class TutorialMod
         ModItems.register(modEventBus);
         ModCreativeModeTabs.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModLootModifiers.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -68,9 +70,7 @@ public class TutorialMod
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event)
     {
-        for(ServerPlayer player : event.getServer().getPlayerList().getPlayers()) {
-            player.sendSystemMessage(Component.translatable("message.tutorialmod.server_start_message"));
-        }
+
     }
 
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
