@@ -64,6 +64,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.food_tab")).displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.STRAWBERRY.get());
                         pOutput.accept(ModItems.SAPPHIRE_STRAWBERRY.get());
+                        pOutput.accept(ModItems.STRAWBERRY_SEEDS.get());
                         pOutput.accept(ModItems.RAW_FRENCH_FRIES.get());
                         pOutput.accept(ModItems.FRENCH_FRIES.get());
                     })

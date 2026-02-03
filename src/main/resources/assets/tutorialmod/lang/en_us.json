@@ -28,6 +28,8 @@
   "item.tutorialmod.sapphire_leggings": "Sapphire Leggings",
   "item.tutorialmod.sapphire_boots": "Sapphire Boots",
 
+  "item.tutorialmod.strawberry_seeds": "Strawberry Seeds",
+
   "block.tutorialmod.sapphire_block": "Block of Sapphire",
   "block.tutorialmod.raw_sapphire_block": "Block of Raw Sapphire",
   "block.tutorialmod.sapphire_ore": "Sapphire Ore",
@@ -46,6 +48,8 @@
   "block.tutorialmod.sapphire_wall": "Sapphire Wall",
   "block.tutorialmod.sapphire_door": "Sapphire Door",
   "block.tutorialmod.sapphire_trapdoor": "Sapphire Trapdoor",
+
+  "block.tutorialmod.strawberry_crop": "Strawberry",
 
   "creativetab.sapphire_tab": "Tutorial Mod: Sapphires",
   "creativetab.misc_tab": "Tutorial Mod: Misc",

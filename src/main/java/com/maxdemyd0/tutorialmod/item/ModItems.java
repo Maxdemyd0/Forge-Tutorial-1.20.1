@@ -1,6 +1,7 @@
 package com.maxdemyd0.tutorialmod.item;
 
 import com.maxdemyd0.tutorialmod.TutorialMod;
+import com.maxdemyd0.tutorialmod.block.ModBlocks;
 import com.maxdemyd0.tutorialmod.item.custom.FuelItem;
 import com.maxdemyd0.tutorialmod.item.custom.GemDetectorItem;
 import com.maxdemyd0.tutorialmod.item.custom.MetalDetectorItem;
@@ -84,6 +85,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> GEM_DETECTOR = ITEMS.register("gem_detector",
             () -> new GemDetectorItem(new Item.Properties().durability(100)));
+
+    public static final RegistryObject<Item> STRAWBERRY_SEEDS = ITEMS.register("strawberry_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.STRAWBERRY_CROP.get(), new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

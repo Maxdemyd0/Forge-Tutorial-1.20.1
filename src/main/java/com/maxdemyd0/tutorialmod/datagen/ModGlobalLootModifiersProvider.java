@@ -3,6 +3,7 @@ package com.maxdemyd0.tutorialmod.datagen;
 import com.maxdemyd0.tutorialmod.TutorialMod;
 import com.maxdemyd0.tutorialmod.item.ModItems;
 import com.maxdemyd0.tutorialmod.loot.AddItemModifier;
+import com.maxdemyd0.tutorialmod.loot.AddSusSandItemModifier;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Blocks;
@@ -28,5 +29,8 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
 
         add("metal_detector_from_jungle_temples", new AddItemModifier(new LootItemCondition[]{
                 new LootTableIdCondition.Builder(ResourceLocation.parse("chests/jungle_temple")).build()}, ModItems.METAL_DETECTOR.get()));
+
+        add("metal_detector_from_suspicious_sand", new AddSusSandItemModifier(new LootItemCondition[]{
+                new LootTableIdCondition.Builder(ResourceLocation.parse("archaeology/desert_pyramid")).build()}, ModItems.METAL_DETECTOR.get()));
     }
 }

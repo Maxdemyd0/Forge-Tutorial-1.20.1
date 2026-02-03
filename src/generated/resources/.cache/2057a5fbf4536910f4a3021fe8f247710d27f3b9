@@ -1,4 +1,4 @@
-// 1.20.1	2026-01-29T20:35:56.8426508	Item Models: tutorialmod
+// 1.20.1	2026-02-03T17:41:44.8815781	Item Models: tutorialmod
 0aeab9d8502d65a1054cad52c3e24c58eb8dcb9c assets/tutorialmod/models/item/french_fries.json
 42eba6954b63316a140f55ebe6d4a1512f73351a assets/tutorialmod/models/item/gem_detector.json
 f9452f4cffda35007cc3f7cdb45f6a62469c530f assets/tutorialmod/models/item/gold_redstone_magnet.json
@@ -69,3 +69,4 @@ c51610ec371180fbdd4ba38ffa7d4ad69dda4853 assets/tutorialmod/models/item/sapphire
 57b0c78a4d68b08f0db44e21a63411abf9c21b70 assets/tutorialmod/models/item/sapphire_trapdoor.json
 8822d7daa71ae6a7f4091c85362a2480e52d0c06 assets/tutorialmod/models/item/sapphire_wall.json
 0f4c6f5df2121954f3a0de1eb8e66d8c587fed43 assets/tutorialmod/models/item/strawberry.json
+85dffe5c3e34ee76908efb087a4ed2c43e945942 assets/tutorialmod/models/item/strawberry_seeds.json
