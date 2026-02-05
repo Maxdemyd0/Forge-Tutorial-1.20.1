@@ -1,6 +1,7 @@
 package com.maxdemyd0.tutorialmod.block;
 
 import com.maxdemyd0.tutorialmod.TutorialMod;
+import com.maxdemyd0.tutorialmod.block.custom.CornCropBlock;
 import com.maxdemyd0.tutorialmod.block.custom.SoundBlock;
 import com.maxdemyd0.tutorialmod.block.custom.StrawberryCropBlock;
 import com.maxdemyd0.tutorialmod.item.ModItems;
@@ -65,6 +66,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> STRAWBERRY_CROP = BLOCKS.register("strawberry_crop",
             () -> new StrawberryCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+
+    public static final RegistryObject<Block> CORN_CROP = BLOCKS.register("corn_crop",
+            () -> new CornCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
         return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));

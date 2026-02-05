@@ -1,6 +1,7 @@
 package com.maxdemyd0.tutorialmod.datagen.loot;
 
 import com.maxdemyd0.tutorialmod.block.ModBlocks;
+import com.maxdemyd0.tutorialmod.block.custom.CornCropBlock;
 import com.maxdemyd0.tutorialmod.block.custom.StrawberryCropBlock;
 import com.maxdemyd0.tutorialmod.item.ModItems;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
@@ -53,6 +54,14 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.add(ModBlocks.STRAWBERRY_CROP.get(), createCropDrops(ModBlocks.STRAWBERRY_CROP.get(), ModItems.STRAWBERRY.get(),
                 ModItems.STRAWBERRY_SEEDS.get(), lootitemcondition$builder));
+
+        LootItemCondition.Builder lootitemcondition$builder2 = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.CORN_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CornCropBlock.AGE, CornCropBlock.FIRST_STAGE_MAX_AGE+CornCropBlock.SECOND_STAGE_MAX_AGE));
+
+        this.add(ModBlocks.CORN_CROP.get(), createCropDrops(ModBlocks.CORN_CROP.get(), ModItems.CORN.get(),
+                ModItems.CORN_SEEDS.get(), lootitemcondition$builder2));
+
     }
 
     public LootTable.Builder createOneDropCustomOreDrops(Block pBlock, Item item) {

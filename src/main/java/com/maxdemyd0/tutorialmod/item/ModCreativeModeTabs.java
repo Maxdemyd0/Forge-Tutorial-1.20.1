@@ -67,6 +67,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.STRAWBERRY_SEEDS.get());
                         pOutput.accept(ModItems.RAW_FRENCH_FRIES.get());
                         pOutput.accept(ModItems.FRENCH_FRIES.get());
+                        pOutput.accept(ModItems.CORN.get());
+                        pOutput.accept(ModItems.CORN_SEEDS.get());
                     })
                     .build());
 

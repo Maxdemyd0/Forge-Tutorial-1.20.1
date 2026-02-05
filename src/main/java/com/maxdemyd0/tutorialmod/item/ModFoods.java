@@ -13,4 +13,7 @@ public class ModFoods{
 
     public static final FoodProperties FRENCH_FRIES = new FoodProperties.Builder().fast().nutrition(5)
             .saturationMod(0.3f).build();
+
+    public static final FoodProperties CORN = new FoodProperties.Builder().nutrition(5)
+            .saturationMod(0.25f).build();
 }

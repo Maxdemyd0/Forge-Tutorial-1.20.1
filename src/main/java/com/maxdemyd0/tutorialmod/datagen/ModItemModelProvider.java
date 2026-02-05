@@ -46,17 +46,19 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.SAPPHIRE);
         simpleItem(ModItems.SAPPHIRE_NUGGET);
         simpleItem(ModItems.RAW_SAPPHIRE);
-        simpleItem(ModItems.STRAWBERRY);
-        simpleItem(ModItems.SAPPHIRE_STRAWBERRY);
-        simpleItem(ModItems.RAW_FRENCH_FRIES);
-        simpleItem(ModItems.FRENCH_FRIES);
         simpleItem(ModItems.PINE_CONE);
         simpleItem(ModItems.REDSTONE_MAGNET);
         simpleItem(ModItems.GOLD_REDSTONE_MAGNET);
         simpleItem(ModItems.METAL_DETECTOR);
         simpleItem(ModItems.GEM_DETECTOR);
 
+        simpleItem(ModItems.STRAWBERRY);
         simpleItem(ModItems.STRAWBERRY_SEEDS);
+        simpleItem(ModItems.SAPPHIRE_STRAWBERRY);
+        simpleItem(ModItems.RAW_FRENCH_FRIES);
+        simpleItem(ModItems.FRENCH_FRIES);
+        simpleItem(ModItems.CORN);
+        simpleItem(ModItems.CORN_SEEDS);
 
         simpleBlockItem(ModBlocks.SAPPHIRE_DOOR);
 
@@ -83,7 +85,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     }
 
     private void trimmedArmorItem(RegistryObject<Item> itemRegistryObject) {
-        final String MOD_ID = TutorialMod.MOD_ID; // Change this to your mod id
+        final String MOD_ID = TutorialMod.MOD_ID;
 
         if(itemRegistryObject.get() instanceof ArmorItem armorItem) {
             trimMaterials.entrySet().forEach(entry -> {
