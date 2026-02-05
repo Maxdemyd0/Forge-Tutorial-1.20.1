@@ -23,7 +23,8 @@ public class CornCropBlock extends CropBlock {
     public static final int FIRST_STAGE_MAX_AGE = 7;
     public static final int SECOND_STAGE_MAX_AGE = 1;
 
-    private static final VoxelShape[] SHAPE_BY_AGE = new VoxelShape[]{Block.box(0.0D, 0.0D, 0.0D, 16.0D, 2.0D, 16.0D),
+    private static final VoxelShape[] SHAPE_BY_AGE = new VoxelShape[]{
+            Block.box(0.0D, 0.0D, 0.0D, 16.0D, 2.0D, 16.0D),
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 4.0D, 16.0D),
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 6.0D, 16.0D),
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 8.0D, 16.0D),
@@ -40,26 +41,10 @@ public class CornCropBlock extends CropBlock {
     }
 
     @Override
-    public void growCrops(Level pLevel, BlockPos pPos, BlockState pState) {
-        int nextAge = this.getAge(pState) + this.getBonemealAgeIncrease(pLevel);
-        int maxAge = this.getMaxAge();
-        if(nextAge > maxAge) {
-            nextAge = maxAge;
-        }
-
-        if(this.getAge(pState) == FIRST_STAGE_MAX_AGE && pLevel.getBlockState(pPos.above(1)).is(Blocks.AIR)) {
-            pLevel.setBlock(pPos.above(1), this.getStateForAge(nextAge), 2);
-        } else {
-            pLevel.setBlock(pPos.above(1), this.getStateForAge(nextAge - SECOND_STAGE_MAX_AGE), 2);
-        }
-    }
-
-    @Override
     public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
         return SHAPE_BY_AGE[this.getAge(pState)];
     }
 
-    @Override
     public void randomTick(BlockState pState, ServerLevel pLevel, BlockPos pPos, RandomSource pRandom) {
         if (!pLevel.isAreaLoaded(pPos, 1)) return;
         if (pLevel.getRawBrightness(pPos, 0) >= 9) {
@@ -95,8 +80,23 @@ public class CornCropBlock extends CropBlock {
     }
 
     @Override
+    public void growCrops(Level pLevel, BlockPos pPos, BlockState pState) {
+        int nextAge = this.getAge(pState) + this.getBonemealAgeIncrease(pLevel);
+        int maxAge = this.getMaxAge();
+        if(nextAge > maxAge) {
+            nextAge = maxAge;
+        }
+
+        if(this.getAge(pState) == FIRST_STAGE_MAX_AGE && pLevel.getBlockState(pPos.above(1)).is(Blocks.AIR)) {
+            pLevel.setBlock(pPos.above(1), this.getStateForAge(nextAge), 2);
+        } else {
+            pLevel.setBlock(pPos, this.getStateForAge(nextAge - SECOND_STAGE_MAX_AGE), 2);
+        }
+    }
+
+    @Override
     public int getMaxAge() {
-        return FIRST_STAGE_MAX_AGE +  SECOND_STAGE_MAX_AGE;
+        return FIRST_STAGE_MAX_AGE + SECOND_STAGE_MAX_AGE;
     }
 
     @Override
